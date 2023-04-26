@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "415948175417",
+    "project_id": "upload-retrive-from-firebase",
+    "storage_bucket": "upload-retrive-from-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415948175417:android:fa8389aca95878fb8435e8",
+        "android_client_info": {
+          "package_name": "com.aamirashraf.uploadretrivefromfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415948175417-svd01utfu097j347jssf2ruufcjv2t87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw4yABTFlcq93Bycvr2E9QcTmXaZtmAKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415948175417-svd01utfu097j347jssf2ruufcjv2t87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
