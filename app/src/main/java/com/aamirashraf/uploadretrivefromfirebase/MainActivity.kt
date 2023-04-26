@@ -39,8 +39,26 @@ class MainActivity : AppCompatActivity() {
             val person=Person(firstName,lastName)
             savePerson(person)
         }
-        btnRetrieveData.setOnClickListener {
-            retrievePerson()
+        subscribleToRealTimeUpdates()
+//        btnRetrieveData.setOnClickListener {
+//            retrievePerson()
+//        }
+    }
+    private fun subscribleToRealTimeUpdates(){
+        personCollectionRef.addSnapshotListener{querySnapshot,firebaseFirestoreException ->
+            firebaseFirestoreException?.let {
+                Toast.makeText(this,it.message,Toast.LENGTH_LONG).show()
+                return@addSnapshotListener
+            }
+            querySnapshot?.let {
+                val sb=StringBuilder()
+                for (document in it){
+                    //also we need to make default constructor of Person class otherwise it will crash
+                    val person=document.toObject<Person>()  //or we use Person:: class.java also
+                    sb.append("$person\n")
+                }
+                tvPerson.text=sb.toString()
+            }
         }
     }
     private fun savePerson(person: Person){
